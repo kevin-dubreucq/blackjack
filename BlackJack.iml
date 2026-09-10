@@ -13,7 +13,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/tests/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/tests/resources" isTestSource="false" />
     </content>
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="jdk" jdkName="JavaSE-21" jdkType="JavaSDK" />
   </component>
 </module>
