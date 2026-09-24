@@ -12,10 +12,19 @@ public final class Card {
     public Value getValue(){
         return value;
     }
+
     public Suit getSuit(){
         return suit;
     }
+
     public int NumericalValue(){
+        return this.value.getNumericalValue();
+    }
+    public void flip(){
+        isFaceUp = !isFaceUp;
+    }
+    public String toString(){
+        return "Suit :" + this.getSuit() + " Value :" + this.getValue();
 
     }
 }
