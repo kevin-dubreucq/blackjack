@@ -1,12 +1,26 @@
-package fr.univartois.butinfo.qdev.blackjack;
+/**
+ * Ce fichier fait partie du projet blackjack.
+ *
+ * (c) 2026 Drqke
+ * Tous droits réservés.
+ */
+
+package fr.univartois.butinfo.qdev.blackjack.card;
+
+import fr.univartois.butinfo.qdev.blackjack.card.Deck;
+import fr.univartois.butinfo.qdev.blackjack.card.House;
+import fr.univartois.butinfo.qdev.blackjack.card.Player;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/
-Le type BlackjackGame*
-@author melan*
-@version 0.1.0*/
+/**
+ * Le type BlackjackGame
+ *
+ * @author Drqke
+ *
+ * @version 0.1.0
+ */
 public class BlackjackGame {
 
     private final Deck deck;
@@ -121,3 +135,4 @@ public class BlackjackGame {
     }
 
 }
+

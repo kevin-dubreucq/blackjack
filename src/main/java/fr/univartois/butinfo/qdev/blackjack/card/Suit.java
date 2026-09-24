@@ -1,18 +1,34 @@
+/**
+ * Ce fichier fait partie du projet blackjack.
+ *
+ * (c) 2026 Drqke
+ * Tous droits réservés.
+ */
+
 package fr.univartois.butinfo.qdev.blackjack.card;
 
+
+/**
+ * Le type Suit
+ *
+ * @author Drqke
+ *
+ * @version 0.1.0
+ */
 public enum Suit {
-    CLUBS("Trèfle"),
-    DIAMONDS("Carreau"),
-    HEARTS("Coeur"),
-    SPADES("Pique");
+    CLUBS("clubs"),
+    DIAMONDS("diamonds"),
+    HEARTS("hearts"),
+    SPADES("spades");
 
-    private final String symbol ;
+    private String symbol;
 
-    Suit(String symbol){
-
-        this.symbol = symbol ;
+    private Suit(String symbol) {
+        this.symbol = symbol;
     }
-    public String getSymbol(){
-        return symbol ;
+
+    public String getSymbol() {
+        return symbol;
     }
 }
+

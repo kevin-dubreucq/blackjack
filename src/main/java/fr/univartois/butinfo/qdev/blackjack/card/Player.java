@@ -1,42 +1,62 @@
+/**
+ * Ce fichier fait partie du projet blackjack.
+ *
+ * (c) 2026 Drqke
+ * Tous droits réservés.
+ */
+
 package fr.univartois.butinfo.qdev.blackjack.card;
+
 import java.util.Scanner;
 
-public class Player extends CardOwner{
+/**
+ * Le type Player
+ *
+ * @author Drqke
+ *
+ * @version 0.1.0
+ */
+public class Player extends CardOwner {
 
-
-    public Player(String name){
+    /**
+     * Crée une nouvelle instance de Player.
+     * @param name Le nom du joueur.
+     */
+    protected Player(String name) {
         super(name);
-
     }
 
-    public void win(){
-        System.out.println("Player win");
-    }
-    public void lose(){
-        System.out.println("Player lose");
-    }
-    public void push(){
-        System.out.println("Player push");
-    }
-    public void bust(){
-        System.out.println("Player bust");
-    }
-
+    /*
+     * (non-Javadoc)
+     *
+     * @see fr.univartois.butinfo.qdev.blackjack.CardOwner#isHitting()
+     */
     @Override
     public boolean isHitting() {
-
-        System.out.println(
-                "Voulez vous continuer vous avez" + getHandValue() + "y/n");
-
-        Scanner scanner = new Scanner(System.in);
-        if (scanner.nextLine().equals("n")) {
-            return false;
-        } else if (scanner.nextLine().equals("y")) {
-            return true;
-
-        } else {
+        if (isBusted()) {
             return false;
         }
+
+        System.out.print("Voulez-vous tirer une carte ? (o/n) : ");
+        Scanner scanner = new Scanner(System.in);
+        String response = scanner.next();
+        return response.equalsIgnoreCase("o") || response.equalsIgnoreCase("oui");
+    }
+
+    public void win() {
+        System.out.println("Vous avez gagné !");
+    }
+
+    public void push() {
+        System.out.println("Égalité dommage");
+    }
+
+    public void lose() {
+        System.out.println("Perdu");
+    }
+
+    public void bust() {
+        System.out.println("Vous avez dépassé 21");
     }
 
 
